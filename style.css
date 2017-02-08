@@ -1,0 +1,95 @@
+:root {
+    --color-bg-dark: #11365f;
+    --color-bg-dark-60: rgba(17,54,95,0.6);
+    --color-bg-dark-80: rgba(17,54,95,0.8);
+    --color-highlight2: #2a85e9;
+    --color-highlight2_dark: #103257;
+    --color-highlight2_light: #7db1e9;
+    --color-highlight1: #254d84;
+    --color-highlight1_dark: #11243e;
+    --color-highlight1_light: #3c7cd5;
+    --color-highlight3: #892a00;
+    --color-highlight3_dark:  #4e1800;
+    --color-highlight3_light: #ff4e00;
+    --color-font-light: #bccad4;
+    --color-font-dark: #111927;
+}
+
+/*a:active,*/
+a:active,
+a:focus,
+input:focus {
+    border: 0;
+    outline: 0;
+}
+
+input::-moz-focus-inner, button::-moz-focus-inner { 
+  border: 0; 
+}
+
+html {
+    background-color: var(--color-bg-dark);
+    line-height: 1.3em;
+    color: var(--color-font-light);
+    width: 100%;
+    overflow:auto;
+}
+
+body {
+    height:100%;
+    margin:0;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position-x: center;  
+}
+
+div.wrapper {
+    padding: 2em;
+    min-width: 650px;
+}
+
+div.score {
+    font-family: coolvetica, Helvetica, sans-serif; 
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+div.pic {
+    vertical-align: bottom;
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
+.mole {
+    background-image: url("maulwurf.png");
+    position: absolute;
+    z-index: 1;
+    margin-left: 55px;
+    transition: top 1s, opacity 0.5s linear 0.7s;
+    height: 100px;
+    width: 77px;
+    top: 100%;
+    opacity: 0;
+}
+
+div.pile {
+    margin-top: 75px;
+    width: 200px;
+    height: 73px;
+    background-image: url("pile.png");   
+    position: absolute;
+    z-index: 2;
+}
+
+.mole4.show, .mole5.show, .mole6.show {
+    top: 290;
+    opacity: 1;
+}
+
+.mole1.show, .mole2.show, .mole3.show {
+    top: 100;
+    opacity: 1;
+}
